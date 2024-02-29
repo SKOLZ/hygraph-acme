@@ -1,0 +1,26 @@
+.button {
+  @apply
+  bg-primary
+  text-white
+  font-medium
+  leading-6
+  rounded-lg
+}
+
+.button.button-sm {
+  @apply
+  py-2.5
+  px-4.5
+}
+
+.button.button-md {
+  @apply
+  py-3
+  px-5
+}
+
+.button.button-lg {
+  @apply
+  py-4
+  px-7
+}
