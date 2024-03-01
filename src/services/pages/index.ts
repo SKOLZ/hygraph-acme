@@ -1,4 +1,7 @@
+import { getSdk } from "@/generated/graphql";
 import { client } from "../client";
-import { pageContentQuery } from "./queries/pageContentQuery";
 
-export const getPageContent = () => client.request(pageContentQuery);
+export const getPageContent = async (url: string) => {
+  const response = await getSdk(client).pageContent({ url });
+  return response.page;
+};

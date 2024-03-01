@@ -1,0 +1,72 @@
+fragment BlockHero on Hero {
+  id
+  title
+  description {
+    raw
+  }
+  buttonActions {
+    id
+    buttonText
+    size
+  }
+}
+
+fragment BlockCallout on Callout {
+  id
+  title
+  description {
+    raw
+  }
+  actionButton {
+    buttonText
+    size
+  }
+}
+
+fragment BlockFeatureSection on FeatureSection {
+  id
+  label
+  title
+  description {
+    raw
+  }
+  media {
+    ... on StaticImage {
+      image {
+        url
+      }
+    }
+    ... on YoutubeEmbed {
+      youtubeUrl
+    }
+  }
+  direction
+}
+
+
+fragment Block on SectionblockUnion {
+  __typename,
+  ...BlockHero
+  ...BlockCallout
+  ...BlockFeatureSection
+} 
+
+
+query pageContent($url: String) {
+  page(where: { url: $url }) {
+    sections {
+      id
+      block {
+        ... Block
+      }
+    }
+    seo {
+      title
+      description
+      canonicalUrl
+      seoImage {
+        url
+      }
+    }
+  }
+}
