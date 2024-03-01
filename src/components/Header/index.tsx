@@ -5,7 +5,7 @@ import Image from "next/image";
 export const Header: React.FC = () => {
   return (
     <header className=" bg-white border-b-gray-100 border-b">
-      <nav className="flex gap-8 items-center py-4.5 px-8 text-secondary-600 font-medium leading-6 max-w-screen-xl mx-auto">
+      <nav className="flex gap-8 items-center py-4.5 px-8 text-secondary-600 font-medium max-w-screen-xl mx-auto">
         <Link href="#"><Image src={Logo} width={100} height={22} alt="logo" /></Link>
         <Link href="#">Home</Link>
         <Link href="#">Features</Link>

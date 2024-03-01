@@ -3,7 +3,6 @@
   bg-primary
   text-white
   font-medium
-  leading-6
   rounded-lg
 }
 
@@ -21,6 +20,7 @@
 
 .button.button-lg {
   @apply
+  text-lg
   py-4
   px-7
 }

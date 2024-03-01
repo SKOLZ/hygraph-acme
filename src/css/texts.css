@@ -1,0 +1,35 @@
+.title-1 {
+  @apply
+  text-6xl
+  leading-18
+  font-semibold
+  tracking-tight
+}
+
+.title-2 {
+  @apply
+  text-3xl
+  leading-9.5
+  font-semibold
+}
+
+.text-1 {
+  @apply
+  text-xl
+  leading-7.5
+}
+
+.text-2 {
+  @apply
+  text-lg
+}
+
+.text-3 {
+  @apply
+  text-lg
+  leading-9.5
+  font-bold
+  tracking-wider
+  uppercase
+  text-primary
+}
