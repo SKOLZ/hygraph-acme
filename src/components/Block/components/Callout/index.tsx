@@ -1,7 +1,6 @@
-import { BlockCallout } from "@/generated/graphql";
-import { getButtonSizeClassName } from "@/utils/getButtonSizeClassName";
 import { RichText } from "@graphcms/rich-text-react-renderer";
-import Link from "next/link";
+import { BlockCallout } from "@/generated/graphql";
+import { ButtonLink } from "@/components/ButtonLink";
 
 export const Callout: React.FC<BlockCallout> = (callout) => {
   return (
@@ -18,9 +17,9 @@ export const Callout: React.FC<BlockCallout> = (callout) => {
             }}
           />
         </div>
-        <Link href="#" className={`button ${getButtonSizeClassName(callout.actionButton.size)}`}>
+        <ButtonLink href="#" size={callout.actionButton.size}>
           {callout.actionButton.buttonText}
-        </Link>
+        </ButtonLink>
       </div>
     </div>
   );

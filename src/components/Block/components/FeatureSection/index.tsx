@@ -1,9 +1,8 @@
-import { BlockFeatureSection } from "@/generated/graphql";
 import { RichText } from "@graphcms/rich-text-react-renderer";
+import { BlockFeatureSection } from "@/generated/graphql";
+import { ButtonLink } from "@/components/ButtonLink";
 import { getDirectionClassName } from "./utils/getDirectionClassName";
 import { Media } from "./components/Media";
-import { getButtonSizeClassName } from "@/utils/getButtonSizeClassName";
-import Link from "next/link";
 
 export const FeatureSection: React.FC<BlockFeatureSection> = (featureSection) => {
   return (
@@ -22,9 +21,9 @@ export const FeatureSection: React.FC<BlockFeatureSection> = (featureSection) =>
           }}
         />
         {featureSection.featureSectionButton && (
-          <Link href="#" className={`button ${getButtonSizeClassName(featureSection.featureSectionButton.size)} mt-8`}>
+          <ButtonLink href="#" size={featureSection.featureSectionButton.size} className="mt-8">
             {featureSection.featureSectionButton.buttonText}
-          </Link>
+          </ButtonLink>
         )}
       </div>
       <div className="w-1/2 bg-secondary-100 p-10 rounded-3xl">

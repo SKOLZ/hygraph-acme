@@ -1,7 +1,6 @@
-import { BlockHero } from "@/generated/graphql";
-import { getButtonSizeClassName } from "@/utils/getButtonSizeClassName";
 import { RichText } from "@graphcms/rich-text-react-renderer";
-import Link from "next/link";
+import { BlockHero } from "@/generated/graphql";
+import { ButtonLink } from "@/components/ButtonLink";
 
 export const Hero: React.FC<BlockHero> = (hero) => {
   return (
@@ -18,7 +17,9 @@ export const Hero: React.FC<BlockHero> = (hero) => {
       <div className="flex gap-3">
         {
           hero.buttonActions.map(button => (
-            <Link href="#" key={button.buttonText} className={`button ${getButtonSizeClassName(button.size)}`}>{button.buttonText}</Link>
+            <ButtonLink href="#" key={button.buttonText} size={button.size}>
+              {button.buttonText}
+            </ButtonLink>
           ))
         }
       </div>
