@@ -1,11 +1,11 @@
 .title-1 {
   @apply
-  text-6xl
-  leading-18
+  text-4xl
+  leading-11
   font-semibold
   tracking-tight
-  xl:text-4xl
-  xl:leading-11
+  xl:text-6xl
+  xl:leading-18
 }
 
 .title-2 {
@@ -26,9 +26,17 @@
 .text-2 {
   @apply
   text-lg
+  font-normal
+  xl:text-xl
+  xl:leading-7.5
 }
 
 .text-3 {
+  @apply
+  text-lg
+}
+
+.text-4 {
   @apply
   text-lg
   leading-9.5
@@ -37,4 +45,9 @@
   uppercase
   font-space-grotesk
   text-primary
+}
+
+.text-5 {
+  @apply
+  text-base
 }

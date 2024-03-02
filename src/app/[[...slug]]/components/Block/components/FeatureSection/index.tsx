@@ -6,17 +6,17 @@ import { Media } from "./components/Media";
 
 export const FeatureSection: React.FC<BlockFeatureSection> = (featureSection) => {
   return (
-    <div className={`flex items-center max-w-screen-xl mx-auto px-8 gap-24 ${getDirectionClassName(featureSection.direction)} xl:flex-col xl:gap-12`}>
-      <div className="w-1/2 flex flex-col items-start xl:w-full">
+    <div className={`flex flex-col max-w-screen-xl mx-auto px-8 gap-12 ${getDirectionClassName(featureSection.direction)} xl:items-center xl:flex-row xl:gap-24`}>
+      <div className="flex flex-col items-start xl:w-1/2">
         {featureSection.label && (
-          <p className="text-3">{featureSection.label}</p>
+          <p className="text-4">{featureSection.label}</p>
         )}
         <h2 className="title-2 mb-4">{featureSection.title}</h2>
         <RichText
           content={featureSection.description.raw}
           renderers={{
             p: ({ children }) => (
-              <p className="text-2 text-secondary-600">{children}</p>
+              <p className="text-3 text-secondary-600">{children}</p>
             )
           }}
         />
@@ -26,7 +26,7 @@ export const FeatureSection: React.FC<BlockFeatureSection> = (featureSection) =>
           </ButtonLink>
         )}
       </div>
-      <div className="w-1/2 bg-secondary-100 p-10 rounded-3xl xl:w-full xl:p-0 xl:rounded-none">
+      <div className="xl:bg-secondary-100 xl:w-1/2 xl:p-10 xl:rounded-3xl">
         {
           featureSection.media && (
             <Media media={featureSection.media} />

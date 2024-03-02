@@ -6,7 +6,7 @@ export const YoutubeEmbed: React.FC<FeatureSectionYoutubeEmbed> = (youtubeEmbed)
       title={youtubeEmbed.title}
       src={youtubeEmbed.youtubeUrl}
       allowFullScreen
-      className="h-80 xl:h-45"
+      className="h-45 xl:h-80"
       width="100%"
       loading="lazy"
     />

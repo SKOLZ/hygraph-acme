@@ -15,7 +15,7 @@ export default async function Home({ params }: Props) {
   return (
     <>
       { pageContent.sections.map(section => (
-        <section key={section.id} className='flex flex-col gap-20 py-24 xl:py-12 xl:gap-16'>
+        <section key={section.id} className='flex flex-col gap-16 py-12 xl:py-24 xl:gap-20'>
           {
             section.block.map(block => (
               <Block key={block.id} block={block} />
