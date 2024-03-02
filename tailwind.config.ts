@@ -25,6 +25,12 @@ const config: Config = {
       fontFamily: {
         "space-grotesk": ["var(--font-space-grotesk)"],
       },
+      height: {
+        45: "11.25rem",
+      },
+      maxWidth: {
+        "screen-xl": "1280px",
+      },
     },
     colors: {
       white: "#FFF",

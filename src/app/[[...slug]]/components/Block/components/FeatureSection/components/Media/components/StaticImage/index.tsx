@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export const StaticImage: React.FC<FeatureSectionStaticImage> = (staticImage) => {
   return (
-    <div className="relative h-80">
+    <div className="relative h-80 xl:h-45">
       <Image src={staticImage.image.url} alt={staticImage.altText || ''} fill />
     </div>
   );
