@@ -1,5 +1,5 @@
-import { Block } from '@/components/Block';
 import { getPageContent } from '@/services/pages';
+import { Block } from './components/Block';
 
 interface Props {
   params: {
