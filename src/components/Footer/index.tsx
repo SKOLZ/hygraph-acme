@@ -6,7 +6,7 @@ interface Props {
 export const Footer: React.FC<Props> = () => {
   return (
     <footer className="w-full max-w-screen-xl px-8 mx-auto">
-      <div className="flex justify-between text-secondary-400 py-8 border-t border-t-gray-200">
+      <div className="flex justify-between gap-12 text-secondary-400 py-8 border-t border-t-gray-200 text-center items-center xl:flex-col-reverse">
         <p>
           © 2023 Acme Co. All rights reserved.
         </p>
