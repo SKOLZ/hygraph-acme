@@ -23,6 +23,24 @@ fragment BlockCallout on Callout {
   }
 }
 
+fragment FeatureSectionStaticImage on StaticImage {
+  image {
+    url
+  }
+  altText
+}
+
+fragment FeatureSectionYoutubeEmbed on YoutubeEmbed {
+  youtubeUrl
+  title
+}
+
+fragment Media on FeatureSectionMedia {
+  __typename
+  ...FeatureSectionStaticImage
+  ...FeatureSectionYoutubeEmbed
+}
+
 fragment BlockFeatureSection on FeatureSection {
   id
   label
@@ -31,14 +49,11 @@ fragment BlockFeatureSection on FeatureSection {
     raw
   }
   media {
-    ... on StaticImage {
-      image {
-        url
-      }
-    }
-    ... on YoutubeEmbed {
-      youtubeUrl
-    }
+    ...Media
+  }
+  featureSectionButton:actionButton {
+    buttonText
+    size
   }
   direction
 }
@@ -49,7 +64,7 @@ fragment Block on SectionblockUnion {
   ...BlockHero
   ...BlockCallout
   ...BlockFeatureSection
-} 
+}
 
 
 query pageContent($url: String) {

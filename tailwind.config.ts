@@ -21,6 +21,9 @@ const config: Config = {
         9.5: "2.375rem",
         18: "4.5rem",
       },
+      fontFamily: {
+        "space-grotesk": ["var(--font-space-grotesk)"],
+      },
     },
     colors: {
       white: "#FFF",
