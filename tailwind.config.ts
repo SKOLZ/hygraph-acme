@@ -19,6 +19,7 @@ const config: Config = {
       lineHeight: {
         7.5: "1.875rem",
         9.5: "2.375rem",
+        11: "2.75rem",
         18: "4.5rem",
       },
       fontFamily: {
@@ -40,6 +41,13 @@ const config: Config = {
         900: "#0F172A",
       },
       primary: "#7C3AED",
+    },
+    screens: {
+      "2xl": { max: "1535px" }, // => @media (max-width: 1535px) { ... }
+      xl: { max: "1279px" }, // => @media (max-width: 1279px) { ... }
+      lg: { max: "1023px" }, // => @media (max-width: 1023px) { ... }
+      md: { max: "767px" }, // => @media (max-width: 767px) { ... }
+      sm: { max: "639px" }, // => @media (max-width: 639px) { ... }
     },
   },
   plugins: [],

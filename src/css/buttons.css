@@ -4,6 +4,7 @@
   text-white
   font-medium
   rounded-lg
+  xl:w-full
 }
 
 .button.button-sm {

@@ -4,6 +4,8 @@
   leading-18
   font-semibold
   tracking-tight
+  xl:text-4xl
+  xl:leading-11
 }
 
 .title-2 {
@@ -18,6 +20,7 @@
   font-normal
   text-xl
   leading-7.5
+  xl:text-lg
 }
 
 .text-2 {
