@@ -7,7 +7,7 @@ import { Media } from "./components/Media";
 export const FeatureSection: React.FC<BlockFeatureSection> = (featureSection) => {
   return (
     <div className={`flex flex-col max-w-screen-xl mx-auto px-8 gap-12 ${getDirectionClassName(featureSection.direction)} xl:items-center xl:flex-row xl:gap-24`}>
-      <div className="flex flex-col items-start xl:w-1/2">
+      <div className="flex flex-col items-start xl:flex-1">
         {featureSection.label && (
           <p className="text-4">{featureSection.label}</p>
         )}
@@ -26,7 +26,7 @@ export const FeatureSection: React.FC<BlockFeatureSection> = (featureSection) =>
           </ButtonLink>
         )}
       </div>
-      <div className="xl:bg-secondary-100 xl:w-1/2 xl:p-10 xl:rounded-3xl">
+      <div className="xl:flex-1 xl:bg-secondary-100 xl:rounded-3xl">
         {
           featureSection.media && (
             <Media media={featureSection.media} />

@@ -14,7 +14,7 @@ export const Hero: React.FC<BlockHero> = (hero) => {
           )
         }}
       />
-      <div className="flex gap-3 flex-col justify-center self-stretch xl:flex-row">
+      <div className="flex gap-3 flex-col justify-center items-center self-stretch xl:flex-row">
         {
           hero.buttonActions.map(button => (
             <ButtonLink href="#" key={button.buttonText} size={button.size}>

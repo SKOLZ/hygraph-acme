@@ -32,6 +32,7 @@ const config: Config = {
     colors: {
       white: "#FFF",
       gray: {
+        50: "#F2F4F7",
         100: "#F2F4F7",
         200: "#E4E7EC",
       },
