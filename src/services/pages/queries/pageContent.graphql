@@ -58,7 +58,7 @@ fragment BlockFeatureSection on FeatureSection {
   direction
 }
 
-fragment Block on SectionblockUnion {
+fragment Block on SectionblocksUnion {
   __typename
   ...BlockHero
   ...BlockCallout
@@ -69,7 +69,7 @@ query pageContent($url: String) {
   page(where: { url: $url }) {
     sections {
       id
-      block {
+      blocks {
         ...Block
       }
     }

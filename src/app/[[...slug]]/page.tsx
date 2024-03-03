@@ -52,7 +52,7 @@ export default async function Home({ params }: Props) {
           key={section.id}
           className="flex flex-col gap-16 py-12 xl:gap-20 xl:py-24"
         >
-          {section.block.map((block) => (
+          {section.blocks.map((block) => (
             <Block key={block.id} block={block} />
           ))}
         </section>
