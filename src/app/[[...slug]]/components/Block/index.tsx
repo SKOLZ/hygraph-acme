@@ -1,7 +1,7 @@
+import { Block as BlockType } from "@/generated/graphql";
 import { Callout } from "./components/Callout";
 import { FeatureSection } from "./components/FeatureSection";
 import { Hero } from "./components/Hero";
-import { Block as BlockType } from "@/generated/graphql";
 
 interface Props {
   block: BlockType;

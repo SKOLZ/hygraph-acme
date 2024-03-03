@@ -1,8 +1,8 @@
 import Link from "next/link";
-import Logo from "@/assets/acme_logo.svg";
 import Image from "next/image";
 import { Sizes } from "@/generated/graphql";
-import { ButtonLink } from "../ButtonLink";
+import Logo from "@/assets/acme_logo.svg";
+import { ButtonLink } from "@/components/ButtonLink";
 
 export const Header: React.FC = () => {
   return (

@@ -1,7 +1,6 @@
+import { notFound } from "next/navigation";
 import { getPageContent, getPageSeo } from "@/services/pages";
 import { Block } from "./components/Block";
-import Head from "next/head";
-import { notFound } from "next/navigation";
 
 interface Props {
   params: {
@@ -41,7 +40,6 @@ export default async function Home({ params }: Props) {
   const pageContent = await getPageContent(params.slug);
 
   if (!pageContent) {
-    console.log("no page content");
     return notFound();
   }
 
