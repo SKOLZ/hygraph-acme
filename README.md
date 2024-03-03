@@ -1,36 +1,36 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Acme Website - Hygraph's Interview case study
+
+This is a NextJS project that uses hygraph to create all the pages for this website.
 
 ## Getting Started
 
-First, run the development server:
-
+### Dependency installation
+This project uses PNPM to handle dependencies. run
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+pnpm install
 ```
+to get all dependencies installed.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Configure the environment
+Create a `.env` in the project's root folder with the following keys:
+```env
+SITE_URL=???
+HYGRAPH_BASE_URL=???
+HYGRAPH_TOKEN=???
+```
+make sure you replace the `???` values with the real values for this project.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Run the dev server
+This project uses [Codegen](https://the-guild.dev/graphql/codegen) to automatically handle types in your graphQL queries. When running
+```bash
+pnpm dev
+```
+the NextJS server and the Codegen watcher will start executing. The local version will be available in `http://localhost:3000` and whenever you make a change in your graphQL queries Codegen will update the types.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Updating the types when changing the Hygraph Schema
+When making changes in the Hygraph Schema you'll need to rerun the Codegen command to get the updated types from Hygraph. To do so just run:
+```bash
+pnpm codegen
+```
+and your types will be automatically updated.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
