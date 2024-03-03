@@ -5,16 +5,16 @@ import { ButtonLink } from "@/components/ButtonLink";
 export const Hero: React.FC<BlockHero> = (hero) => {
   return (
     <div className="flex flex-col items-center text-center px-8 max-w-screen-xl mx-auto">
-      <h1 className="title-1 text-secondary-900 mb-4 xl:mb-6">{hero.title}</h1>
+      <h1 className="title-1 text-secondary-900 mb-4 sm:mb-6">{hero.title}</h1>
       <RichText
         content={hero.description.raw}
         renderers={{
           p: ({ children }) => (
-            <p className="text-2 text-secondary-400 mb-8 max-w-3xl xl:mb-12">{children}</p>
+            <p className="text-2 text-secondary-400 mb-8 max-w-3xl sm:mb-12">{children}</p>
           )
         }}
       />
-      <div className="flex gap-3 flex-col justify-center items-center self-stretch xl:flex-row">
+      <div className="flex gap-3 flex-col justify-center items-center self-stretch sm:flex-row">
         {
           hero.buttonActions.map(button => (
             <ButtonLink href="#" key={button.buttonText} size={button.size}>

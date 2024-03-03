@@ -1,5 +1,7 @@
-import { getPageContent } from '@/services/pages';
+import { getPageContent, getPageSeo } from '@/services/pages';
 import { Block } from './components/Block';
+import Head from 'next/head';
+import { notFound } from 'next/navigation';
 
 interface Props {
   params: {
@@ -7,10 +9,37 @@ interface Props {
   }
 }
 
-export default async function Home({ params }: Props) {
-  const pageContent = await getPageContent(`/${params.slug?.join('/') || ''}`);
+export async function generateMetadata({ params }: Props) {
+  const page = await getPageSeo(params.slug);
+  if (!page) {
+    return {};
+  }
+  const url = params.slug ? `${process.env.SITE_URL}/${params.slug.join("/")}` : process.env.SITE_URL;
+  return {
+    metadataBase: new URL(process.env.SITE_URL!),
+    title: page.seo.title,
+    description: page.seo.description,
+    images: [page.seo.seoImage?.url],
+    url,
+    openGraph: {
+      title: page.seo.title,
+      description: page.seo.description,
+      images: [page.seo.seoImage?.url],
+      url
+    },
+    alternates: {
+      canonical: page.seo.canonicalUrl && `${process.env.SITE_URL}/${page.seo.canonicalUrl}`
+    },
+  };
+}
 
-  if (!pageContent) return (<>404!</>);
+export default async function Home({ params }: Props) {
+  const pageContent = await getPageContent(params.slug);
+
+  if (!pageContent) {
+    console.log("no page content")
+    return notFound();
+  }
 
   return (
     <>

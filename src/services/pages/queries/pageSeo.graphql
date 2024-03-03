@@ -1,0 +1,12 @@
+query pageSeo($url: String) {
+  page(where: { url: $url }) {
+    seo {
+      title
+      description
+      canonicalUrl
+      seoImage {
+        url
+      }
+    }
+  }
+}

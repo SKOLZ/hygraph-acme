@@ -75,13 +75,5 @@ query pageContent($url: String) {
         ... Block
       }
     }
-    seo {
-      title
-      description
-      canonicalUrl
-      seoImage {
-        url
-      }
-    }
   }
 }

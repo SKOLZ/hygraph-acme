@@ -6,7 +6,7 @@
   rounded-lg
   text-center
   w-full
-  xl:w-auto
+  sm:w-auto
 }
 
 .button.button-sm {
@@ -25,5 +25,5 @@
   @apply
   py-4
   px-7
-  xl:text-lg
+  sm:text-lg
 }

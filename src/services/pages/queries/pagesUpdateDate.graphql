@@ -1,0 +1,6 @@
+query pagesUpdateDate {
+  pages {
+    updatedAt
+    url
+  }
+}
