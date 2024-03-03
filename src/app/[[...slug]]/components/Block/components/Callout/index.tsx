@@ -4,8 +4,8 @@ import { ButtonLink } from "@/components/ButtonLink";
 
 export const Callout: React.FC<BlockCallout> = (callout) => {
   return (
-    <div className="px-8 w-full max-w-screen-xl mx-auto">
-      <div className="p-8 rounded-2xl flex flex-col justify-between items-start bg-secondary-800 gap-8 xl:flex-row xl:p-16">
+    <div className="mx-auto w-full max-w-screen-xl px-8">
+      <div className="flex flex-col items-start justify-between gap-8 rounded-2xl bg-secondary-800 p-8 xl:flex-row xl:p-16">
         <div className="flex flex-col items-start gap-4">
           <h2 className="title-2 text-white">{callout.title}</h2>
           <RichText
@@ -13,7 +13,7 @@ export const Callout: React.FC<BlockCallout> = (callout) => {
             renderers={{
               p: ({ children }) => (
                 <p className="text-1 text-white">{children}</p>
-              )
+              ),
             }}
           />
         </div>
@@ -23,4 +23,4 @@ export const Callout: React.FC<BlockCallout> = (callout) => {
       </div>
     </div>
   );
-} 
+};

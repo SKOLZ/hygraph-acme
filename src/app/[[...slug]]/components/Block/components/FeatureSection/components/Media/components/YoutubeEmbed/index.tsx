@@ -1,6 +1,8 @@
 import { FeatureSectionYoutubeEmbed } from "@/generated/graphql";
 
-export const YoutubeEmbed: React.FC<FeatureSectionYoutubeEmbed> = (youtubeEmbed) => {
+export const YoutubeEmbed: React.FC<FeatureSectionYoutubeEmbed> = (
+  youtubeEmbed,
+) => {
   return (
     <div className="lg:p-10">
       <iframe
@@ -13,4 +15,4 @@ export const YoutubeEmbed: React.FC<FeatureSectionYoutubeEmbed> = (youtubeEmbed)
       />
     </div>
   );
-} 
+};

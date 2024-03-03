@@ -3,16 +3,16 @@ import { StaticImage } from "./components/StaticImage";
 import { YoutubeEmbed } from "./components/YoutubeEmbed";
 
 interface Props {
-  media: MediaType
+  media: MediaType;
 }
 
-export const Media: React.FC<Props> = ({media}) => {
+export const Media: React.FC<Props> = ({ media }) => {
   switch (media.__typename) {
     case EntityTypeName.StaticImage:
-      return <StaticImage {...media} />
+      return <StaticImage {...media} />;
     case EntityTypeName.YoutubeEmbed:
-      return <YoutubeEmbed {...media} />
+      return <YoutubeEmbed {...media} />;
     default:
       return null;
   }
-} 
+};

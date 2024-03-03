@@ -4,9 +4,13 @@ import { ButtonLink } from "@/components/ButtonLink";
 import { getDirectionClassName } from "./utils/getDirectionClassName";
 import { Media } from "./components/Media";
 
-export const FeatureSection: React.FC<BlockFeatureSection> = (featureSection) => {
+export const FeatureSection: React.FC<BlockFeatureSection> = (
+  featureSection,
+) => {
   return (
-    <div className={`flex flex-col max-w-screen-xl mx-auto px-8 gap-12 ${getDirectionClassName(featureSection.direction)} lg:items-center lg:flex-row lg:gap-24`}>
+    <div
+      className={`mx-auto flex max-w-screen-xl flex-col gap-12 px-8 ${getDirectionClassName(featureSection.direction)} lg:flex-row lg:items-center lg:gap-24`}
+    >
       <div className="flex flex-col items-start lg:flex-1">
         {featureSection.label && (
           <p className="text-4">{featureSection.label}</p>
@@ -17,22 +21,22 @@ export const FeatureSection: React.FC<BlockFeatureSection> = (featureSection) =>
           renderers={{
             p: ({ children }) => (
               <p className="text-3 text-secondary-600">{children}</p>
-            )
+            ),
           }}
         />
         {featureSection.featureSectionButton && (
-          <ButtonLink href="#" size={featureSection.featureSectionButton.size} className="mt-8">
+          <ButtonLink
+            href="#"
+            size={featureSection.featureSectionButton.size}
+            className="mt-8"
+          >
             {featureSection.featureSectionButton.buttonText}
           </ButtonLink>
         )}
       </div>
-      <div className="lg:flex-1 lg:bg-secondary-100 lg:rounded-3xl">
-        {
-          featureSection.media && (
-            <Media media={featureSection.media} />
-          )
-        }
+      <div className="lg:flex-1 lg:rounded-3xl lg:bg-secondary-100">
+        {featureSection.media && <Media media={featureSection.media} />}
       </div>
     </div>
   );
-} 
+};

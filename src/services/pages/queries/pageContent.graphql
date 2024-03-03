@@ -51,28 +51,26 @@ fragment BlockFeatureSection on FeatureSection {
   media {
     ...Media
   }
-  featureSectionButton:actionButton {
+  featureSectionButton: actionButton {
     buttonText
     size
   }
   direction
 }
 
-
 fragment Block on SectionblockUnion {
-  __typename,
+  __typename
   ...BlockHero
   ...BlockCallout
   ...BlockFeatureSection
 }
-
 
 query pageContent($url: String) {
   page(where: { url: $url }) {
     sections {
       id
       block {
-        ... Block
+        ...Block
       }
     }
   }

@@ -4,15 +4,23 @@ import { getButtonSizeClassName } from "./utils/getButtonSizeClassName";
 import { ButtonSizes } from "./types";
 
 interface Props extends PropsWithChildren {
-  size: ButtonSizes,
-  href: string,
-  className?: string
+  size: ButtonSizes;
+  href: string;
+  className?: string;
 }
 
-export const ButtonLink: React.FC<Props> = ({size, href, className = '', children}) => {
+export const ButtonLink: React.FC<Props> = ({
+  size,
+  href,
+  className = "",
+  children,
+}) => {
   return (
-    <Link href={href} className={`button ${getButtonSizeClassName(size)} ${className}`}>
+    <Link
+      href={href}
+      className={`button ${getButtonSizeClassName(size)} ${className}`}
+    >
       {children}
     </Link>
   );
-} 
+};

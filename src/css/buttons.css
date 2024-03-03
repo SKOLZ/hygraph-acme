@@ -1,29 +1,25 @@
 .button {
-  @apply
-  bg-primary
-  text-white
-  font-medium
+  @apply w-full
   rounded-lg
+  bg-primary
   text-center
-  w-full
-  sm:w-auto
+  font-medium
+  text-white
+  sm:w-auto;
 }
 
 .button.button-sm {
-  @apply
-  py-2.5
-  px-4.5
+  @apply px-4.5
+  py-2.5;
 }
 
 .button.button-md {
-  @apply
-  py-3
-  px-5
+  @apply px-5
+  py-3;
 }
 
 .button.button-lg {
-  @apply
+  @apply px-7
   py-4
-  px-7
-  sm:text-lg
+  sm:text-lg;
 }

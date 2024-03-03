@@ -2,5 +2,5 @@
 @tailwind components;
 @tailwind utilities;
 
-@import './buttons.css';
-@import './texts.css';
+@import "./buttons.css";
+@import "./texts.css";

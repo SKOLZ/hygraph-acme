@@ -7,7 +7,7 @@ import { Footer } from "@/components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
-  variable: "--font-space-grotesk"
+  variable: "--font-space-grotesk",
 });
 
 export default function RootLayout({
@@ -17,11 +17,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} ${spaceGrotesk.variable} flex flex-col min-h-dvh bg-secondary-50`}>
+      <body
+        className={`${inter.className} ${spaceGrotesk.variable} flex min-h-dvh flex-col bg-secondary-50`}
+      >
         <Header />
-        <main className="flex-1 flex flex-col">
-          {children}
-        </main>
+        <main className="flex flex-1 flex-col">{children}</main>
         <Footer />
       </body>
     </html>

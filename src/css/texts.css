@@ -1,52 +1,45 @@
 .title-1 {
-  @apply
-  text-4xl
-  leading-11
+  @apply text-4xl
   font-semibold
+  leading-11
   tracking-tight
   md:text-6xl
-  md:leading-18
+  md:leading-18;
 }
 
 .title-2 {
-  @apply
-  text-3xl
-  leading-9.5
+  @apply text-3xl
   font-semibold
+  leading-9.5;
 }
 
 .text-1 {
-  @apply
+  @apply text-xl
   font-normal
-  text-xl
-  leading-7.5
+  leading-7.5;
 }
 
 .text-2 {
-  @apply
-  text-lg
+  @apply text-lg
   font-normal
   md:text-xl
-  md:leading-7.5
+  md:leading-7.5;
 }
 
 .text-3 {
-  @apply
-  text-lg
+  @apply text-lg;
 }
 
 .text-4 {
-  @apply
+  @apply font-space-grotesk
   text-lg
-  leading-9.5
   font-bold
-  tracking-wider
   uppercase
-  font-space-grotesk
-  text-primary
+  leading-9.5
+  tracking-wider
+  text-primary;
 }
 
 .text-5 {
-  @apply
-  text-base
+  @apply text-base;
 }
