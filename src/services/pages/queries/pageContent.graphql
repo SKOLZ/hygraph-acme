@@ -26,6 +26,8 @@ fragment BlockCallout on Callout {
 fragment FeatureSectionStaticImage on StaticImage {
   image {
     url
+    width
+    height
   }
   altText
 }

@@ -34,9 +34,11 @@ export const FeatureSection: React.FC<BlockFeatureSection> = (
           </ButtonLink>
         )}
       </div>
-      <div className="lg:flex-1 lg:rounded-3xl lg:bg-secondary-100">
-        {featureSection.media && <Media media={featureSection.media} />}
-      </div>
+      {featureSection.media && (
+        <div className="flex justify-center lg:flex-1 lg:rounded-3xl lg:bg-secondary-100">
+          <Media media={featureSection.media} />
+        </div>
+      )}
     </div>
   );
 };

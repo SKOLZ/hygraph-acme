@@ -5,14 +5,12 @@ export const StaticImage: React.FC<FeatureSectionStaticImage> = (
   staticImage,
 ) => {
   return (
-    <div className="relative h-45 rounded border border-gray-50 lg:m-10 lg:h-80">
-      <Image
-        src={staticImage.image.url}
-        alt={staticImage.altText || ""}
-        fill
-        className="object-cover"
-        sizes="100%"
-      />
-    </div>
+    <Image
+      src={staticImage.image.url}
+      alt={staticImage.altText || ""}
+      width={staticImage.image.width!}
+      height={staticImage.image.height!}
+      className="rounded border border-gray-50 min-w-0 lg:m-10"
+    />
   );
 };
