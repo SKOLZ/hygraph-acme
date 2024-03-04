@@ -40,7 +40,7 @@ export async function generateMetadata({ params }: Props) {
     alternates: {
       canonical:
         page.seo.canonicalUrl &&
-        `${process.env.SITE_URL}/${page.seo.canonicalUrl}`,
+        `${process.env.SITE_URL}${page.seo.canonicalUrl}`,
     },
   };
 }

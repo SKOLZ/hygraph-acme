@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FeatureSection renders the component correctly 1`] = `
+<div>
+  <div
+    class="mx-auto flex max-w-screen-xl flex-col gap-12 px-8  lg:flex-row lg:items-center lg:gap-24"
+  >
+    <div
+      class="flex flex-col items-start lg:flex-1"
+    >
+      <p
+        class="text-4"
+      >
+        feature section label
+      </p>
+      <h2
+        class="title-2 mb-4"
+      >
+        feature section title
+      </h2>
+      <p
+        class="text-3 text-secondary-600"
+      >
+        As a composable and headless platform, Acme works with all your preferred frontend frameworks, existing systems, GraphQL and REST APIs.
+      </p>
+      <a
+        class="button button-lg mt-8"
+        href="#"
+      >
+        Get started
+      </a>
+    </div>
+    <div
+      class="flex justify-center lg:flex-1 lg:rounded-3xl lg:bg-secondary-100"
+    >
+      <img
+        alt="Stats page showing a profile views chart and a chat window"
+        class="rounded border border-gray-50 min-w-0 lg:m-10"
+        data-nimg="1"
+        decoding="async"
+        height="320"
+        loading="lazy"
+        src="/_next/image?url=https%3A%2F%2Fmedia.graphassets.com%2Fbbd3PKNcTBGVkNbcois7&w=1080&q=75"
+        srcset="/_next/image?url=https%3A%2F%2Fmedia.graphassets.com%2Fbbd3PKNcTBGVkNbcois7&w=640&q=75 1x, /_next/image?url=https%3A%2F%2Fmedia.graphassets.com%2Fbbd3PKNcTBGVkNbcois7&w=1080&q=75 2x"
+        style="color: transparent;"
+        width="480"
+      />
+    </div>
+  </div>
+</div>
+`;

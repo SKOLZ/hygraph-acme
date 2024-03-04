@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`not-found renders the not found page correctly 1`] = `
+<div>
+  <div
+    class="mx-auto flex max-w-screen-lg flex-1 flex-col items-center justify-center gap-4 text-center"
+  >
+    <h1
+      class="title-1 text-secondary-900"
+    >
+      The page you were looking for doesn't exist
+    </h1>
+    <p
+      class="text-2 text-secondary-400"
+    >
+      Maybe you were looking for one of these:
+    </p>
+    <ul
+      class="flex gap-1"
+    >
+      <li>
+        <a
+          class="text-2 rounded-sm bg-secondary-100 px-2 py-1 text-secondary-600"
+          href="/home"
+        >
+          /home
+        </a>
+      </li>
+      <li>
+        <a
+          class="text-2 rounded-sm bg-secondary-100 px-2 py-1 text-secondary-600"
+          href="/hello"
+        >
+          /hello
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+`;

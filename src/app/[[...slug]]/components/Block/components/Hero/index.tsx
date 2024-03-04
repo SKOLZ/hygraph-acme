@@ -4,7 +4,7 @@ import { ButtonLink } from "@/components/ButtonLink";
 
 export const Hero: React.FC<BlockHero> = (hero) => {
   return (
-    <div className="mx-auto flex max-w-screen-xl flex-col items-center px-8 text-center">
+    <div className="mx-auto w-full flex max-w-screen-xl flex-col items-center px-8 text-center">
       <h1 className="title-1 mb-4 text-secondary-900 sm:mb-6">{hero.title}</h1>
       <RichText
         content={hero.description.raw}

@@ -3,7 +3,6 @@ import Link from "next/link";
 
 export default async function NotFound() {
   const existingPages = await getPagesUrls();
-
   return (
     <div className="mx-auto flex max-w-screen-lg flex-1 flex-col items-center justify-center gap-4 text-center">
       <h1 className="title-1 text-secondary-900">

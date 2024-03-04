@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StaticImage renders the element correctly 1`] = `
+<div>
+  <img
+    alt=""
+    class="rounded border border-gray-50 min-w-0 lg:m-10"
+    data-nimg="1"
+    decoding="async"
+    height="320"
+    loading="lazy"
+    src="/_next/image?url=https%3A%2F%2Fmedia.graphassets.com%2Fbbd3PKNcTBGVkNbcois7&w=1080&q=75"
+    srcset="/_next/image?url=https%3A%2F%2Fmedia.graphassets.com%2Fbbd3PKNcTBGVkNbcois7&w=640&q=75 1x, /_next/image?url=https%3A%2F%2Fmedia.graphassets.com%2Fbbd3PKNcTBGVkNbcois7&w=1080&q=75 2x"
+    style="color: transparent;"
+    width="480"
+  />
+</div>
+`;

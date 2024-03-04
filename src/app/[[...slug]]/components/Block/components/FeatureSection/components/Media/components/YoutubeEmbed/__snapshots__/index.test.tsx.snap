@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`YoutubeEmbed renders the element correctly 1`] = `
+<div>
+  <iframe
+    allowfullscreen=""
+    class="aspect-video lg:m-10"
+    loading="lazy"
+    src="https://www.youtube.com/embed/znkZ8X_7tLA"
+    title="Media Title"
+    width="100%"
+  />
+</div>
+`;
