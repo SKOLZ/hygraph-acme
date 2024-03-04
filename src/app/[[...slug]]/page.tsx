@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { getPageContent, getPageSeo } from "@/services/pages";
+import { getPageContent, getPageSeo, getPagesUrls } from "@/services/pages";
 import { Block } from "./components/Block";
 
 interface Props {
@@ -8,11 +8,20 @@ interface Props {
   };
 }
 
+export async function generateStaticParams() {
+  const pages = await getPagesUrls();
+  return pages.map((page) => ({
+    slug: page.url.slice(1).split('/')
+  }));
+}
+
 export async function generateMetadata({ params }: Props) {
   const page = await getPageSeo(params.slug);
+
   if (!page) {
     return {};
   }
+
   const url = params.slug
     ? `${process.env.SITE_URL}/${params.slug.join("/")}`
     : process.env.SITE_URL;
