@@ -14,19 +14,19 @@ exports[`Callout renders the component correctly 1`] = `
         <h2
           class="title-2 text-white"
         >
-          Start your 30-day free trial
+          Callout title
         </h2>
         <p
           class="text-1 text-white"
         >
-          Join over 4,000+ startups already growing with us.
+          Callout description
         </p>
       </div>
       <a
         class="button button-md "
         href="#"
       >
-        Get started
+        Callout button
       </a>
     </div>
   </div>

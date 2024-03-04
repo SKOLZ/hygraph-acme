@@ -1,7 +1,7 @@
 export const mockedCallout = {
   __typename: "Callout" as const,
   id: "clt7bqmp49dkq07uj23atb9h5",
-  title: "Start your 30-day free trial",
+  title: "Callout title",
   description: {
     raw: {
       children: [
@@ -9,7 +9,7 @@ export const mockedCallout = {
           type: "paragraph",
           children: [
             {
-              text: "Join over 4,000+ startups already growing with us.",
+              text: "Callout description",
             },
           ],
         },
@@ -17,7 +17,7 @@ export const mockedCallout = {
     },
   },
   actionButton: {
-    buttonText: "Get started",
+    buttonText: "Callout button",
     size: null,
   },
 };

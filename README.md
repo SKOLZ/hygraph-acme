@@ -45,3 +45,22 @@ pnpm codegen
 ```
 
 and your types will be automatically updated.
+
+
+## Testing
+
+This project uses React Testing Library with Jest for testing. To run the tests execute the command:
+
+```bash
+pnpm test
+```
+
+If you want to update the Snapshot tests run:
+
+```bash
+pnpm test -- -u
+```
+
+## Webhooks and ISR
+
+This project statically generates the pages for the URLs defined in Hygraph. There's a webhook configured in Hygraph that automatically regenerates the pages when a page is edited by calling the `api/webhook/revalidate` with a `POST` method.
