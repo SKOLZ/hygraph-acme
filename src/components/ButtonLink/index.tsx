@@ -4,7 +4,7 @@ import { getButtonSizeClassName } from "./utils/getButtonSizeClassName";
 import { ButtonSizes } from "./types";
 
 interface Props extends PropsWithChildren {
-  size: ButtonSizes;
+  size?: ButtonSizes;
   href: string;
   className?: string;
 }
