@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`footer renders correctly 1`] = `
+<div>
+  <header
+    class=" border-b border-b-gray-100 bg-white"
+  >
+    <nav
+      class="text-5 mx-auto flex max-w-screen-xl items-center gap-8 px-8 py-4.5 font-medium leading-6 text-secondary-600"
+    >
+      <a
+        href="#"
+      >
+        <img
+          alt="logo"
+          data-nimg="1"
+          decoding="async"
+          height="22"
+          loading="lazy"
+          src="/_next/image?url=%2Fimg.jpg&w=256&q=75"
+          srcset="/_next/image?url=%2Fimg.jpg&w=128&q=75 1x, /_next/image?url=%2Fimg.jpg&w=256&q=75 2x"
+          style="color: transparent;"
+          width="97"
+        />
+      </a>
+      <a
+        class="hidden md:inline"
+        href="#"
+      >
+        Home
+      </a>
+      <a
+        class="hidden md:inline"
+        href="#"
+      >
+        Features
+      </a>
+      <a
+        class="hidden md:inline"
+        href="#"
+      >
+        Pricing
+      </a>
+      <a
+        class="hidden md:mr-auto md:inline"
+        href="#"
+      >
+        About
+      </a>
+      <a
+        class="hidden md:inline"
+        href="#"
+      >
+        Log in
+      </a>
+      <a
+        class="button button-sm ml-auto w-auto md:ml-0"
+        href="#"
+      >
+        Sign up
+      </a>
+    </nav>
+  </header>
+</div>
+`;
